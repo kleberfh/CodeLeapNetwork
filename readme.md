@@ -42,15 +42,25 @@ And you'll see a menu in your terminal with all available run options.
 
 ### Login
 
-<img width="400"
-src="https://github.com/kleberfh/CodeLeapNetwork/blob/main/assets/demos/login.png?raw=true" />
+<div 
+    style="display: flex; justify-content: center; align-items: center; width: 100%; background-color: #2b2b2b;"
+>
+	<img width="350"
+	    src="https://github.com/kleberfh/CodeLeapNetwork/blob/main/assets/demo/login.png?raw=true" />
+</div>
 
 ### Feed
 
-<img width="100%"
-src="https://github.com/kleberfh/CodeLeapNetwork/blob/main/assets/demos/features.png?raw=true" />
+<div 
+    style="display: flex; justify-content: center; align-items: center; width: 100%; background-color: #2b2b2b;"
+>
+<img width="100%" src="https://github.com/kleberfh/CodeLeapNetwork/blob/main/assets/demo/features.png?raw=true" />
+</div>
 
 ### Multiple screens sizes
 
-<img width="100%"
-src="https://github.com/kleberfh/CodeLeapNetwork/blob/main/assets/demos/screens.png?raw=true" />
+<div 
+    style="display: flex; justify-content: center; align-items: center; width: 100%; background-color: #2b2b2b;"
+>
+<img width="100%" src="https://github.com/kleberfh/CodeLeapNetwork/blob/main/assets/demo/screens.png?raw=true" />
+</div>
