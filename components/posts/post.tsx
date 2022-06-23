@@ -7,52 +7,61 @@ import TrashIcon from '../icons/trash';
 import EditPost from '../modals/editPost';
 import DeletePost from '../modals/deletePost';
 import { getTimeDifference } from '../utilities';
+import {
+  FONT_SIZE_3XL,
+  FONT_SIZE_LG,
+  FONT_SIZE_SM,
+  FONT_SIZE_XS,
+  PRIMARY_COLOR,
+  SECONDARY_COLOR,
+  SPACER_MD,
+  SPACER_SM
+} from "../theme";
 
 const styles = StyleSheet.create({
   container: {
     borderWidth: 1,
-    marginBottom: 20,
+    marginBottom: SPACER_MD,
     borderColor: '#999999',
     flexDirection: 'column',
   },
   header: {
-    padding: 10,
+    padding: SPACER_SM,
     alignItems: 'center',
     flexDirection: 'row',
-    backgroundColor: '#000',
+    backgroundColor: PRIMARY_COLOR,
     justifyContent: 'space-between',
   },
   title: {
-    fontSize: 22,
-    color: '#fff',
+    fontSize: FONT_SIZE_LG,
+    color: SECONDARY_COLOR,
     fontWeight: '700',
   },
   actions: {
     flexDirection: 'row',
   },
   icon: {
-    marginLeft: 15,
+    marginLeft: SPACER_MD - 5,
   },
   body: {
-    marginTop: 20,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingBottom: 20,
+    marginTop: SPACER_MD,
     flexDirection: 'column',
+    paddingBottom: SPACER_MD,
+    paddingHorizontal: SPACER_SM,
   },
   info_container: {
-    marginBottom: 20,
+    marginBottom: SPACER_MD,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   info_text: {
-    fontSize: 16,
+    fontSize: FONT_SIZE_XS,
     color: '#777777',
     fontWeight: '700',
   },
   content: {
-    fontSize: 18,
-    color: '#000',
+    fontSize: FONT_SIZE_SM,
+    color: PRIMARY_COLOR,
     fontWeight: '400',
   },
 });
@@ -83,13 +92,13 @@ export default function Post({ post }: { post: IPost }) {
               style={styles.icon}
               onPress={() => handleShowModal('edit')}
             >
-              <EditIcon size={32} color="#fff" />
+              <EditIcon size={FONT_SIZE_3XL} color={SECONDARY_COLOR} />
             </Pressable>
             <Pressable
               style={styles.icon}
               onPress={() => handleShowModal('delete')}
             >
-              <TrashIcon size={32} color="#fff" />
+              <TrashIcon size={FONT_SIZE_3XL} color={SECONDARY_COLOR} />
             </Pressable>
           </View>
         )}

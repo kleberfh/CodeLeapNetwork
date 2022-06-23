@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Loading from '../loading';
 import { IPostFooterProps } from '../../types';
+import {PRIMARY_COLOR} from "../theme";
 
 const styles = StyleSheet.create({
   container: {
@@ -15,7 +16,7 @@ export default function PostFooter(props: IPostFooterProps) {
   if (showLoading)
     return (
       <View style={styles.container}>
-        <Loading size={60} color="#000" />
+        <Loading size={60} color={PRIMARY_COLOR} />
       </View>
     );
 

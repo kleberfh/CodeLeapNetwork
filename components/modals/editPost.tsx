@@ -8,11 +8,11 @@ import CustomButton from '../form/customButton';
 import { editPost } from '../../redux/postsSlice';
 import { updatePost } from '../../services/codeleap';
 import { modalContainerStyle, modalContentBaseStyle } from './styles';
+import {FONT_SIZE_3XL, FONT_SIZE_4XL, PRIMARY_COLOR, SPACER_SM, TEXT_FIELD_HEIGHT} from "../theme";
 
 const styles = StyleSheet.create({
   modalContent: {
-    paddingTop: 10,
-    paddingBottom: 10,
+    paddingVertical: SPACER_SM,
   },
   modal_header: {
     flexDirection: 'row',
@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   title: {
-    fontSize: 32,
-    color: '#000',
+    fontSize: FONT_SIZE_3XL,
+    color: PRIMARY_COLOR,
     fontWeight: '700',
   },
 });
@@ -64,7 +64,7 @@ export default function EditPost(props: IModalProps) {
         <View style={styles.modal_header}>
           <Text style={styles.title}>Edit item</Text>
           <Pressable onPress={handleClose}>
-            <Ionicons name="md-close" size={42} color="black" />
+            <Ionicons name="md-close" size={FONT_SIZE_4XL} color={PRIMARY_COLOR} />
           </Pressable>
         </View>
         <CustomInput
@@ -76,9 +76,9 @@ export default function EditPost(props: IModalProps) {
         <CustomInput
           value={content}
           onChangeText={setContent}
-          inputStyle={{ height: 100 }}
+          inputStyle={{ height: TEXT_FIELD_HEIGHT }}
           inputProps={{ multiline: true }}
-          containerStyle={{ marginTop: -10 }}
+          containerStyle={{ marginTop: -SPACER_SM }}
           label="Content"
           placeholder="Content here"
         />

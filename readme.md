@@ -1,6 +1,6 @@
 # Welcome to CodeLeap Network!
 
-🌎 A place to connect developers around the world!
+🌎 A place to connect developers around the world! <br />
 💭 Share your toughs or some useful tips to other devs.
 
 ## Development

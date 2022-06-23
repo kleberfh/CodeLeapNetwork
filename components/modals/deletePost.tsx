@@ -6,14 +6,15 @@ import CustomButton from '../form/customButton';
 import { removePost } from '../../redux/postsSlice';
 import { deletePost } from '../../services/codeleap';
 import { modalContainerStyle, modalContentBaseStyle } from './styles';
+import {FONT_SIZE_XL, SPACER_MD} from "../theme";
 
 const styles = StyleSheet.create({
   message: {
-    fontSize: 26,
+    fontSize: FONT_SIZE_XL,
     fontWeight: '400',
   },
   buttons_container: {
-    marginTop: 20,
+    marginTop: SPACER_MD,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-end',

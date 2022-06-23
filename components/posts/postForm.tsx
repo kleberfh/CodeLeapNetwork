@@ -6,32 +6,39 @@ import CustomInput from '../form/customInput';
 import { addPost } from '../../redux/postsSlice';
 import { createPost } from '../../services/codeleap';
 import { RootState } from '../../types';
+import {
+  FONT_SIZE_MD,
+  FONT_SIZE_XL,
+  PRIMARY_COLOR,
+  SECONDARY_COLOR,
+  SPACER_MD,
+  SPACER_SM,
+  TEXT_FIELD_HEIGHT
+} from "../theme";
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    padding: SPACER_MD,
     borderWidth: 1,
-    marginBottom: 20,
     borderColor: '#999999',
+    marginBottom: SPACER_MD,
     flexDirection: 'column',
   },
   header: {
-    fontSize: 26,
-    color: '#000',
+    fontSize: FONT_SIZE_XL,
+    color: PRIMARY_COLOR,
     fontWeight: '700',
   },
   button: {
-    paddingTop: 10,
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 10,
     alignSelf: 'flex-end',
-    backgroundColor: '#000',
+    paddingVertical: SPACER_SM,
+    paddingHorizontal: SPACER_MD,
+    backgroundColor: PRIMARY_COLOR,
   },
   button_text: {
-    fontSize: 20,
-    color: '#FFF',
     fontWeight: '700',
+    color: SECONDARY_COLOR,
+    fontSize: FONT_SIZE_MD,
   },
 });
 
@@ -69,14 +76,14 @@ export default function PostForm() {
       <CustomInput
         value={title}
         onChangeText={setTitle}
-        inputStyle={{ marginBottom: -20 }}
+        inputStyle={{ marginBottom: -SPACER_MD }}
         label="Title"
         placeholder="Hello world"
       />
       <CustomInput
         value={content}
         onChangeText={setContent}
-        inputStyle={{ height: 100 }}
+        inputStyle={{ height: TEXT_FIELD_HEIGHT }}
         inputProps={{ multiline: true }}
         label="Content"
         placeholder="Content here"

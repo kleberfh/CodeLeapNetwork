@@ -8,26 +8,24 @@ import {
   Dimensions,
 } from 'react-native';
 import { screenWidthbreakpoints } from './utilities';
+import {FONT_SIZE_3XL, FULL_WIDTH, HEADER_MAX_WIDTH, PRIMARY_COLOR, SECONDARY_COLOR, SPACER_MD} from "./theme";
 
 const screen = Dimensions.get('screen');
 
 const styles = StyleSheet.create({
   background: {
-    width: '100%',
-    backgroundColor: '#000',
+    width: FULL_WIDTH,
+    backgroundColor: PRIMARY_COLOR,
     alignItems:
       screen.width >= screenWidthbreakpoints.sm ? 'center' : 'stretch',
   },
   container: {
-    paddingTop: 20,
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    width: screen.width >= screenWidthbreakpoints.sm ? 800 : '100%',
+    padding: SPACER_MD,
+    width: screen.width >= screenWidthbreakpoints.sm ? HEADER_MAX_WIDTH : FULL_WIDTH,
   },
   title: {
-    fontSize: 32,
-    color: '#fff',
+    fontSize: FONT_SIZE_3XL,
+    color: SECONDARY_COLOR,
     fontWeight: '700',
   },
 });

@@ -14,6 +14,7 @@ import {
   resetOffset,
 } from '../redux/postsSlice';
 import { screenWidthbreakpoints } from '../components/utilities';
+import {FULL_WIDTH, HEADER_MAX_WIDTH, SECONDARY_COLOR, SPACER_MD} from "../components/theme";
 
 const screen = Dimensions.get('screen');
 
@@ -22,16 +23,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems:
       screen.width >= screenWidthbreakpoints.sm ? 'center' : 'stretch',
-    backgroundColor: '#fff',
+    backgroundColor: SECONDARY_COLOR,
   },
   list: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    width: screen.width >= screenWidthbreakpoints.sm ? 800 : '100%',
+    paddingHorizontal: SPACER_MD,
+    width: screen.width >= screenWidthbreakpoints.sm ? HEADER_MAX_WIDTH : FULL_WIDTH,
   },
   list_container: {
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingVertical: SPACER_MD,
   },
 });
 
