@@ -9,20 +9,21 @@ import {
 } from 'react-native';
 import PostForm from './postForm';
 import { getAllPosts, getPostsStatus } from '../../redux/postsSlice';
+import {FONT_SIZE_LG, FULL_WIDTH, PRIMARY_COLOR, SPACER_MD} from "../theme";
 
 const styles = StyleSheet.create({
   loading_container: {
-    marginTop: 20,
+    marginTop: SPACER_MD,
     alignItems: 'center',
   },
   empty_container: {
-    width: '100%',
-    marginTop: 20,
+    width: FULL_WIDTH,
+    marginTop: SPACER_MD,
     alignItems: 'center',
   },
   empty_text: {
-    fontSize: 24,
-    color: '#000',
+    fontSize: FONT_SIZE_LG,
+    color: PRIMARY_COLOR,
     fontWeight: '500',
     textAlign: 'center',
   },

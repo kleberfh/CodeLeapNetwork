@@ -1,24 +1,24 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 import { ICustomInputProps } from '../../types';
+import {FONT_SIZE_MD, FONT_SIZE_SM, PRIMARY_COLOR, SPACER_MD, SPACER_SM} from "../theme";
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
     display: 'flex',
-    marginBottom: 20,
     flexDirection: 'column',
+    marginVertical: SPACER_MD,
   },
   label: {
-    fontSize: 20,
-    color: '#000',
-    marginBottom: 10,
+    fontSize: FONT_SIZE_MD,
+    color: PRIMARY_COLOR,
+    marginBottom: SPACER_MD,
   },
   input: {
-    padding: 10,
-    color: '#000',
     borderWidth: 1,
-    fontSize: 18,
+    padding: SPACER_SM,
+    color: PRIMARY_COLOR,
+    fontSize: FONT_SIZE_SM,
     borderColor: '#777777',
   },
 });

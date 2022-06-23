@@ -5,42 +5,48 @@ import { setUsername } from '../redux/userSlice';
 import CustomInput from '../components/form/customInput';
 import CustomButton from '../components/form/customButton';
 import { screenWidthbreakpoints } from '../components/utilities';
+import {
+  CONTENT_MAX_WIDTH,
+  FONT_SIZE_LG,
+  FULL_WIDTH,
+  PRIMARY_COLOR,
+  SECONDARY_COLOR,
+  SPACER_MD,
+  SPACER_SM
+} from "../components/theme";
 
 const screen = Dimensions.get('screen');
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingLeft: 20,
-    paddingRight: 20,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#DDDDDD',
+    paddingHorizontal: SPACER_MD,
   },
   signup_container: {
-    padding: 20,
+    padding: SPACER_MD,
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#FFF',
-    width: screen.width >= screenWidthbreakpoints.sm ? 500 : '100%',
+    backgroundColor: SECONDARY_COLOR,
+    width: screen.width >= screenWidthbreakpoints.sm ? CONTENT_MAX_WIDTH : FULL_WIDTH,
   },
   singup_title: {
     fontSize: 32,
-    color: '#000',
+    color: PRIMARY_COLOR,
     fontWeight: '700',
   },
   signup_button: {
-    paddingTop: 10,
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 10,
     alignSelf: 'flex-end',
-    backgroundColor: '#000',
+    paddingVertical: SPACER_SM,
+    paddingHorizontal: SPACER_MD,
+    backgroundColor: PRIMARY_COLOR,
   },
   signup_button_text: {
-    fontSize: 24,
-    color: '#FFF',
     fontWeight: '700',
+    fontSize: FONT_SIZE_LG,
+    color: SECONDARY_COLOR,
   },
 });
 

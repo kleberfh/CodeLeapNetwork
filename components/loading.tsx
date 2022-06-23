@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, Animated, Easing } from 'react-native';
 import { IIconProps } from '../types';
+import {FULL_WIDTH} from "./theme";
 
 const styles = StyleSheet.create({
   container: {
@@ -9,9 +10,9 @@ const styles = StyleSheet.create({
   },
   loading: {
     height: 0,
-    width: '100%',
     borderWidth: 4,
     borderRadius: 90,
+    width: FULL_WIDTH,
   },
 });
 

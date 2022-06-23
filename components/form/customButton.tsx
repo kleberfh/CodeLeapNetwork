@@ -1,23 +1,30 @@
 import React from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { ICustomButtonProps } from '../../types';
 import Loading from '../loading';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import {
+  DISABLED_COLOR,
+  FONT_SIZE_3XL,
+  FONT_SIZE_MD,
+  PRIMARY_COLOR,
+  SECONDARY_COLOR,
+  SPACER_MD,
+  SPACER_SM
+} from "../theme";
 
 const styles = StyleSheet.create({
   button: {
-    paddingTop: 10,
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 10,
+    paddingVertical: SPACER_SM,
+    paddingHorizontal: SPACER_MD,
     alignSelf: 'flex-end',
   },
   button_text: {
-    fontSize: 20,
-    color: '#FFF',
+    fontSize: FONT_SIZE_MD,
+    color: SECONDARY_COLOR,
     fontWeight: '700',
   },
   loading: {
-    marginRight: 20,
+    marginRight: SPACER_MD,
     alignSelf: 'flex-end',
   },
 });
@@ -33,17 +40,17 @@ export default function CustomButton(props: ICustomButtonProps) {
   } = props;
 
   const NORMAL_BUTTON_STYLE = {
-    backgroundColor: disabled ? '#8f8f8f' : '#000',
+    backgroundColor: disabled ? DISABLED_COLOR : PRIMARY_COLOR,
   };
   const GHOST_BUTTON_STYLE = {
-    borderColor: disabled ? '#8f8f8f' : '#000',
+    borderColor: disabled ? DISABLED_COLOR : PRIMARY_COLOR,
     borderWidth: 2,
   };
 
   if (loading)
     return (
       <View style={styles.loading}>
-        <Loading size={32} color="#000" thickness={2} />
+        <Loading size={FONT_SIZE_3XL} color={PRIMARY_COLOR} thickness={2} />
       </View>
     );
 
@@ -57,7 +64,7 @@ export default function CustomButton(props: ICustomButtonProps) {
         buttonStyle,
       ]}
     >
-      <Text style={[styles.button_text, { color: ghost ? '#000' : '#FFF' }]}>
+      <Text style={[styles.button_text, { color: ghost ? PRIMARY_COLOR : SECONDARY_COLOR }]}>
         {text}
       </Text>
     </Pressable>
