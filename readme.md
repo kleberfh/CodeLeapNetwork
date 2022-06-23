@@ -1,7 +1,7 @@
 # Welcome to CodeLeap Network!
 
 🌎 A place to connect developers around the world!<br />
-💭 Share your toughs or some useful tips to other devs.
+💭 Share your thoughts or some useful tips to other devs.
 
 ## Development
 This project was build using [Expo](https://expo.dev) so I can test it on more physical devices.<br />
