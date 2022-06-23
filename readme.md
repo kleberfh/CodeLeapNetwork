@@ -1,11 +1,11 @@
 # Welcome to CodeLeap Network!
 
-🌎 A place to connect developers around the world! <br />
-💭 Share your toughs or some useful tips to other devs.
+🌎 A place to connect developers around the world!<br />
+💭 Share your thoughts or some useful tips to other devs.
 
 ## Development
-This project was build using [Expo](https://expo.dev) so I can test it on more physical devices.
-It took me about one and a half day to the develop this app and a lot of soda (I don't drink coffee 😅)
+This project was build using [Expo](https://expo.dev) so I can test it on more physical devices.<br />
+It took me about one and a half day to develop this app and a lot of soda (I don't drink coffee 😅)
 
 ## Installation
 
